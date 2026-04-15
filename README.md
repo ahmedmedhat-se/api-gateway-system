@@ -45,21 +45,30 @@ public/
 server/
 ├── app/
 │   ├── controllers/
+│   │   ├── apiKeyController.js
 │   │   └── authController.js
 │   ├── middlewares/
-│   │   └── authMiddleware.js
+│   │   ├── authMiddleware.js
+│   │   ├── loggerMiddleware.js
+│   │   ├── rateLimiterMiddleware.js
+│   │   └── validationMiddleware.js
 │   ├── models/
 │   │   ├── ApiKey.js
 │   │   ├── Log.js
 │   │   └── User.js
 │   ├── services/
-│   │   └── authService.js
+│   │   ├── apiKeyService.js
+│   │   ├── loggingService.js
+│   │   └── rateLimiterService.js
 │   └── validations/
 │       ├── apiKey.js
 │       └── auth.js
 ├── config/
 │   └── database.js
 ├── node_modules/
+├── routes/
+│   ├── apiKey.routes.js
+│   └── auth.routes.js
 ├── tests/
 │   └── test-database.test.js
 ├── utils/
