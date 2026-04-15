@@ -70,6 +70,7 @@ server/
 │   ├── apiKey.routes.js
 │   └── auth.routes.js
 ├── tests/
+│   ├── test-api-key.test.js
 │   └── test-database.test.js
 ├── utils/
 │   ├── hash.js
@@ -186,18 +187,17 @@ Body (raw JSON):
 }
 ```
 
-**Step 3:** Create an API Key
+---
+# Testing Files
+
+## Testing APIs Functionalities
 ```bash
-Method: POST
-URL: http://localhost:8080/api/keys
-Headers: 
-  Content-Type: application/json
-  x-api-key: [API_KEY]
+npm run test:api 
 ```
 
-**Expected Response ():**
-```json
-
+## Testing Database Connection
+```bash
+npm run test:db
 ```
 
 ---
