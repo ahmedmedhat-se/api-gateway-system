@@ -11,7 +11,7 @@
 **License:** Proprietary – All rights reserved
 
 <div align="center">
-  <img src="./public/api_gateway_system_erd.png" alt="API Gateway System" width="800" />
+  <img src="./public/code.png" alt="API Gateway System" width="400" />
 </div>
 
 ---
@@ -33,6 +33,10 @@ database/
 ├── api_gateway_system_erd.png
 └── schema.sql
 ```
+
+<div align="center">
+  <img src="./public/api_gateway_system_erd.png" alt="API Gateway System ERD" width="800" />
+</div>
 
 ### Public
 ```js
