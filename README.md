@@ -107,6 +107,100 @@ server/
 | ![MySQL Workbench](https://img.shields.io/badge/MySQL_Workbench-4479A1?style=for-the-badge&logo=mysql&logoColor=white)    | Database Design & Management      | 8.x     |
 
 ---
+
+## Installation
+
+**Step 1. Setup Express.js Project:**
+```bash
+mkdir api-gateway-system
+cd api-gateway-system
+npm init -y
+```
+
+**Step 2: Install all dependencies:**
+```bash
+npm install express mysql2 bcrypt dotenv cors helmet express-rate-limit express-validator
+npm install --save-dev nodemon
+```
+
+---
+# API Documentation
+## Base URL
+```bash
+http://localhost:PORT/api/
+```
+
+**Step 1:** Register a New User
+```bash
+Method: POST
+URL: http://localhost:8080/api/auth/register
+Body (raw JSON):
+{
+  "email": "john.doe@example.com",
+  "password": "TestPassword123"
+}
+```
+
+**Expected Response (201 Created):**
+```json
+{
+    "success": true,
+    "message": "User registered successfully",
+    "data": {
+        "user": {
+            "id": 1,
+            "email": "john.doe@example.com",
+            "created_at": "2026-04-15T19:37:37.000Z"
+        }
+    },
+    "timestamp": "2026-04-15T19:37:37.400Z"
+}
+```
+
+**Step 2:** Login User
+```bash
+Method: POST
+URL: http://localhost:8080/api/auth/login
+Headers: 
+  Content-Type: application/json
+Body (raw JSON):
+{
+  "email": "john.doe@example.com",
+  "password": "TestPassword123"
+}
+```
+
+**Expected Response (200 OK):**
+```json
+{
+    "success": true,
+    "message": "Login successful",
+    "data": {
+        "user": {
+            "id": 1,
+            "email": "john.doe@example.com",
+            "created_at": "2026-04-15T19:37:37.000Z"
+        }
+    },
+    "timestamp": "2026-04-15T19:42:18.302Z"
+}
+```
+
+**Step 3:** Create an API Key
+```bash
+Method: POST
+URL: http://localhost:8080/api/keys
+Headers: 
+  Content-Type: application/json
+  x-api-key: [API_KEY]
+```
+
+**Expected Response ():**
+```json
+
+```
+
+---
 ## License
 **PROPRIETARY LICENSE**
 © 2026 Ahmed Medhat. All Rights Reserved.
